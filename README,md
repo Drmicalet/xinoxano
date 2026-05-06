@@ -1,0 +1,69 @@
+
+# 🐧 xinoxano / arch-base-privileged
+
+> _Xino xano_ — Valencian for "little by little", "steadily".
+> A minimal Arch Linux container base with [`uv`](https://github.com/astral-sh/uv) for fast, reproducible Python development.
+
+[![GitHub](https://img.shields.io/badge/GitHub-Drmicalet/xinoxano-blue)](https://github.com/Drmicalet/xinoxano)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![GHCR](https://img.shields.io/badge/GHCR-ghcr.io/drmicalet/xinoxano-blue)](https://github.com/Drmicalet/xinoxano/pkgs/container/xinoxano)
+
+---
+
+## What is xinoxano? / Què és xinoxano?
+
+**EN**: A minimal container image based on **Arch Linux** with:
+- ✅ Arch Linux rolling release (always up-to-date)
+- ✅ [`uv`](https://github.com/astral-sh/uv) pre-installed globally (`/root/.local/bin/uv`)
+- ✅ Python 3.x from official Arch repos
+- ✅ Essential tools: `git`, `curl`, `wget`, `jq`, `pacman`, `podman`, `sudo`
+- ✅ `builder` user with `sudo` privileges for AUR installations
+- ✅ Privileged capabilities for nested Podman/Docker orchestration
+
+**CA**: Una imatge de contenidor minimalista basada en **Arch Linux** amb:
+- ✅ Arch Linux rolling release (sempre actualitzat)
+- ✅ [`uv`](https://github.com/astral-sh/uv) preinstal·lat globalment (`/root/.local/bin/uv`)
+- ✅ Python 3.x dels repositoris oficials d'Arch
+- ✅ Eines essencials: `git`, `curl`, `wget`, `jq`, `pacman`, `podman`, `sudo`
+- ✅ Usuari `builder` amb privilegis `sudo` per a instal·lacions AUR
+- ✅ Capacitats privilegiades per a orquestració anidada de Podman/Docker
+
+> ⚠️ **Not a sandbox** / **No és un sandbox**: No systemd, no preconfigured services, no magic directories. A clean slate to build upon.
+> ⚠️ **Cap servei preconfigurat, cap directori màgic**. Un llenç net per a construir.
+
+---
+
+## Why Arch + uv + privileged? / Per què Arch + uv + privilegiat?
+
+| Advantage / Avantatge | Explanation / Explicació |
+|----------------------|-------------------------|
+| **Rolling release** | Always latest packages; ideal for AI/ML with evolving dependencies / Sempre les últimes versions; ideal per a IA/ML amb dependències en evolució |
+| **AUR access** | Thousands of community-maintained packages via `yay` / Milers de paquets mantinguts per la comunitat via `yay` |
+| **`uv` speed** | Python dependency resolution 10-100× faster than pip / Resolució de dependències Python 10-100× més ràpida que pip |
+| **Privileged mode** | Enables nested Podman/Docker for complex orchestration / Permet Podman/Docker anidat per a orquestració complexa |
+| **Minimalism** | Only what you need; you decide what to add / Només el necessari; tu decides què afegir |
+
+---
+
+## Quick Start / Inici Ràpid
+
+### Pull and run / Descarregar i executar
+```bash
+# Pull the image / Descarregar la imatge
+podman pull ghcr.io/drmicalet/xinoxano:latest
+
+# Interactive bash / Bash interactiu
+podman run -it --rm ghcr.io/drmicalet/xinoxano:latest
+
+# With volume for development / Amb volum per a desenvolupament
+podman run -it --rm \
+  -v "$(pwd):/work" \
+  -w /work \
+  ghcr.io/drmicalet/xinoxano:latest \
+  bash
+
+  License / Llicència
+MIT. Free to use, modify, and distribute with attribution.
+Lliure ús, modificació i distribució amb menció de l'autor.
+Drmicalet · GitHub · València
+
