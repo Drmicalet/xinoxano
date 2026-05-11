@@ -44,15 +44,7 @@ Un contenidor que fa el seu treball sense cridar l'atenció.
 └── bin/           # Scripts personalitzats
 ```
 
-## Relació amb la família MLAI
 
-```
-arch-base-privileged (imatge base original)
-    └── xinoxano (base + uv, sandbox)
-            └── espardenyesbenlligades (pentesting + ENS + hardening)
-```
-
-xinoxano és el nou estàndard com a imatge base. Tots els nous contenidors del projecte han de fer `FROM ghcr.io/drmicalet/xinoxano:latest`.
 
 ### Contenidors del projecte
 
@@ -61,7 +53,7 @@ xinoxano és el nou estàndard com a imatge base. Tots els nous contenidors del 
 | **xinoxano** | arch-base-privileged | Sandbox + uv | Actiu |
 | **espardenyesbenlligades** | xinoxano | Seguretat perimetral + ENS | v19 |
 | **melderomer** | arch-base-privileged | Honeypot Cowrie | Acabat |
-| **aidagents** | — | Agent Claw (OpenClaw) | Actiu |
+
 
 ## Ús
 
