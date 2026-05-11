@@ -1,7 +1,7 @@
 
 > *Xino xano* — Valencià per a alguna cosa petita, àgil i discret.
 
-Imatge base de **Arch Linux privilegiada** amb **uv** per a experiments, proves i desenvolupament dins de K3s. És la pedra angular sobre la qual es construeix la resta de contenidors del projecte MLAI.
+Imatge base de **Arch Linux privilegiada** amb **uv** per a experiments, proves i desenvolupament dins de K3s. 
 
 ## Per què xinoxano?
 
