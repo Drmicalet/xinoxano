@@ -52,7 +52,7 @@ Un contenidor que fa el seu treball sense cridar l'atenció.
 |------------|-------------|--------|-------|
 | **xinoxano** | arch-base-privileged | Sandbox + uv | Actiu |
 | **espardenyesbenlligades** | xinoxano | Seguretat perimetral + ENS | v19 |
-| **melderomer** | arch-base-privileged | Honeypot Cowrie | Acabat |
+| **melderomer** | arch-base-privileged | Honeypot | Acabat |
 
 
 ## Ús
